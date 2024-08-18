@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Spreadsheet Information</title>
+    <link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<body>
+    <h1>Spreadsheet Information</h1>
+    <div class="table-wrapper">
+        <h1>Spreadsheet Data</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Column 1</th>
+                    <th>Column 2</th>
+                    <th>Column 3</th>
+                    <!-- Add more columns as needed -->
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in rows %}
+                    <tr>
+                        {% for cell in row %}
+                            <td>{{ cell }}</td>
+                        {% endfor %}
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <script>
+        function updateRow(id) {
+            const row = document.querySelectorAll(`[data-id='${id}']`);
+            const data = {
+                id: id,
+                column1: row[0].innerText,
+                column2: row[1].innerText,
+                column3: row[2].innerText
+            };
+            fetch('/update', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            }).then(response => response.json())
+              .then(data => {
+                  if (data.success) {
+                      alert('Row updated successfully!');
+                  }
+              });
+        }
+    </script>
+</body>
+</html>
