@@ -49,13 +49,15 @@ Before running the web dashboard, ensure you have the following installed:
 
 ### Running the Web Dashboard
 
-    Ensure MongoDB is running on your machine. You can start it using the following command
+1. **Ensure MongoDB is running on your machine**
 
+    You can start it using the following command:
+    
     ```bash
     mongod
     ```
 
-1. **Start the Web Dashboard**
+2. **Start the Web Dashboard**
 
     In the web_dashboard_v3 directory, start the web dashboard:
 
