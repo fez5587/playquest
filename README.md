@@ -31,33 +31,37 @@ Before running the web dashboard, ensure you have the following installed:
    ```
 2. **Install Dependencies**
 
-Navigate to the web_dashboard_v3 directory and install the necessary dependencies:
+    Navigate to the web_dashboard_v3 directory and install the necessary dependencies:
 
-    ```cd web_dashboard_v3
+    ```bash
+    cd web_dashboard_v3
     npm install
     ```
 
 3. **Set Up Environment Variables**
 
-Create a .env file in the web_dashboard_v3 directory and add the necessary environment variables. For example:
+    Create a .env file in the web_dashboard_v3 directory and add the necessary environment variables. For example:
 
-    ```MONGO_URI=mongodb://localhost:27017/pq_inventory
+    ```bash
+    MONGO_URI=mongodb://localhost:27017/pq_inventory
     PORT=3000
     ```
 
-
-
 ### Running the Web Dashboard
 
-Ensure MongoDB is running on your machine. You can start it using the following command
+    Ensure MongoDB is running on your machine. You can start it using the following command
 
-```mongod```
+    ```bash
+    mongod
+    ```
 
 1. **Start the Web Dashboard**
 
-In the web_dashboard_v3 directory, start the web dashboard:
+    In the web_dashboard_v3 directory, start the web dashboard:
 
-```npm start```
+    ```bash
+    npm start
+    ```
 
 ### Access the Dashboard
 
